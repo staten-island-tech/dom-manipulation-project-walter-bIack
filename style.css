@@ -8,6 +8,9 @@ body,
 }
 
 body {
+
+    background-image: url(https://th.bing.com/th/id/OIP.kOBu_wO9s1zEP7R5XomTVgHaFj?w=244&h=183&c=7&r=0&o=5&pid=1.7);
+    background-size: cover;
     text-align: center;
     font-family: font-family: 'Raleway', sans-serif;
     font-family: 'Space Mono', monospace;
@@ -15,7 +18,10 @@ body {
     font-size: 100px;
     margin: 50px;
 }
-
+p {
+    font-weight: 900;
+    color: white;
+}
 h1 {
     font-size: 4vw;
     margin: 40px;
