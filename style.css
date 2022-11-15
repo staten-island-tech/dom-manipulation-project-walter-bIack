@@ -30,8 +30,13 @@ body {
     margin: auto; 
 }
 
+.art{
+    font-size: 200%;
+}
+
 .son{
     margin: auto;
+    font-size: 300%;
 }
 
 .myImage {
