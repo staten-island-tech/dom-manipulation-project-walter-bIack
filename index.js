@@ -1,77 +1,29 @@
 const DOMSelectors = {
-  button: document.getElementById("btn"),
-  input: document.querySelector("#input"),
-  box: document.getElementById("box"),
+  songName: document.getElementById("songName"),
+  artistName: document.getElementById("artistName"),
+  Img: document.getElementById("Img"),
+  set: document.getElementById("submit"),
+  container: document.getElementById("container"),
+  temp: document.querySelector(".fake"),
+  getRid: document.getElementById("remove"),
+  form: document.getElementById("form"),
 };
 
-DOMSelectors.button.addEventListener("click", function () {
-  const year = parseInt(document.getElementById("input").value);
-  const age = year;
+DOMSelectors.form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let song = DOMSelectors.songName.value;
+  let artist = DOMSelectors.artistName.value;
+  let outimg = DOMSelectors.Img.value;
 
-  if (year > 0 && year <= 10) {
-    DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
-      `<p id="text">  the most popular name for ${age} year olds was Keith.</p> 
-`
-    );
-  } else if (year > 10 && year <= 20) {
-    DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
-      `<p id="text">  the most popular name for ${age} year olds was Ryan.</p> 
-`
-    );
-  } else if (year > 20 && year <= 30) {
-    DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
-      `<p id="text">  the most popular name for ${age} year olds was Mahamad.</p> 
-`
-    );
-  } else if (year > 30 && year <= 40) {
-    DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
-      `<p id="text">  the most popular name for ${age} year olds was Karen.</p> 
-`
-    );
-  } else if (year > 40 && year <= 50) {
-    DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
-      `<p id="text">  the most popular name for ${age} year olds was donald.</p> 
-`
-    );
-  } else if (year > 50 && year <= 60) {
-    DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
-      `<p id="text">  the most popular name for ${age} year olds was gertrud.</p> 
-`
-    );
-  } else if (year > 60 && year <= 70) {
-    DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
-      `<p id="text">  the most popular name for ${age} year olds was John.</p> 
-`
-    );
-  } else if (year > 70 && year <= 80) {
-    DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
-      `<p id="text">  the most popular name for ${age} year olds was Jakie.</p> 
-`
-    );
-  } else if (year > 80 && year <= 90) {
-    DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
-      `<p id="text">  the most popular name for ${age} year olds was Qui.</p> 
-`
-    );
-  } else if (year > 90 && year <= 100) {
-    DOMSelectors.box.insertAdjacentHTML(
-      "beforeend",
-      `<p id="text"> the most popular name for ${age} year olds was Sergay.</p> 
-`
-    );
-  }
-  DOMSelectors.input.value = "";
-});
-const reset = document.querySelector("#reset");
-reset.addEventListener("click", () => {
-  document.location.reload();
+  DOMSelectors.container.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="fake">
+        <image src></image>
+        <h1 class="son">${song}</h1>
+        <h2 class="art">${artist}</h2>
+        <img src="${outimg}" class="myImage"alt="">
+        <br>
+        <button id="remove" onclick="this.parentElement.remove()">Delete</button>
+    </div>`
+  );
 });

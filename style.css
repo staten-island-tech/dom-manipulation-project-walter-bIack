@@ -1,28 +1,44 @@
-html,
-body,
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 62.5%;
+*, body, head, {
+    padding:0px;
+    font-size: 10px;
 }
 
 body {
-
-    background-image: url(https://th.bing.com/th/id/OIP.kOBu_wO9s1zEP7R5XomTVgHaFj?w=244&h=183&c=7&r=0&o=5&pid=1.7);
-    background-size: cover;
+    background-color: lightcyan ;
+    font-family:"comic Sans ms", "comic sans", cursive;
+}
+.fake {
+    background-color: lightblue;
+    border-radius: 10px;
     text-align: center;
-    font-family: font-family: 'Raleway', sans-serif;
-    font-family: 'Space Mono', monospace;
-    background-color: #7BAFD4;
-    font-size: 100px;
-    margin: 50px;
+    margin: auto;
+    width: 50%;
 }
-p {
-    font-weight: 900;
-    color: white;
+
+.parent {
+    margin: auto;
+    margin-bottom: 1rem;
+    width: fit-content;
 }
-h1 {
-    font-size: 4vw;
-    margin: 40px;
+
+.input  {
+    display: inline;
+    margin: auto; 
+}
+.text {
+    display: inline;
+    margin: auto; 
+}
+
+.son{
+    margin: auto;
+}
+
+.myImage {
+    margin:auto;
+}
+
+#submit {
+    display: block;
+    margin: auto;
 }

@@ -4,16 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>DomSelectors</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <div id="box">
-      <p id="text">What year are you looking for? (Data from 2020)</p>
-      <input type="text" id="input" />
-      <button type="button" id="btn">Enter</button>
-      <button id="reset">Reset</button>
-      <script src="index.js"></script>
+    <div class="all">
+      <form id="form">
+        <div class="name parent">
+          <p class="nameText text">Enter Song Name:</p>
+          <input type="text" class="input songInput" id="songName" />
+        </div>
+        <div class="artist parent">
+          <p class="artistText text">Enter Artist Name:</p>
+          <input type="text" class="input artistInput" id="artistName" />
+        </div>
+        <div class="link parent">
+          <p class="linkText text">Enter Image Link:</p>
+          <input type="text" class="input linkInput" id="Img" />
+        </div>
+        <button id="submit" value="submit" type="submit">Set</button>
+      </form>
     </div>
+    <div id="container">
+      <br />
+    </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
