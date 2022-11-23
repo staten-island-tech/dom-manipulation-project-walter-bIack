@@ -7,6 +7,7 @@ const DOMSelectors = {
   temp: document.querySelector(".fake"),
   getRid: document.getElementById("remove"),
   form: document.getElementById("form"),
+  reset: document.getElementById("reset"),
 };
 
 DOMSelectors.form.addEventListener("submit", function (e) {
@@ -26,4 +27,8 @@ DOMSelectors.form.addEventListener("submit", function (e) {
         <button id="remove" onclick="this.parentElement.remove()">Delete</button>
     </div>`
   );
+});
+
+DOMSelectors.reset.addEventListener("click", function (e) {
+  e.container.remove();
 });

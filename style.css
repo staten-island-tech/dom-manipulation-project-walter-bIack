@@ -6,6 +6,7 @@
 body {
     background-color: lightcyan ;
     font-family:"comic Sans ms", "comic sans", cursive;
+    text-align: center;
 }
 .fake {
     background-color: lightblue;
@@ -19,6 +20,11 @@ body {
     margin: auto;
     margin-bottom: 1rem;
     width: fit-content;
+}
+
+.error{
+    margin:auto;
+    font-size:200%;
 }
 
 .input  {
