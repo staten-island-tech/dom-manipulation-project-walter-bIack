@@ -1,38 +1,52 @@
-const DOMSelectors = {
+let DOMSelectors = {
+  set: document.getElementById("submit"),
+  container: document.getElementById("container"),
+  temp: document.querySelector(".false"),
+  getRid: document.getElementById("remove"),
+  form: document.getElementById("form"),
   songName: document.getElementById("songName"),
   artistName: document.getElementById("artistName"),
   Img: document.getElementById("Img"),
-  set: document.getElementById("submit"),
-  container: document.getElementById("container"),
-  temp: document.querySelector(".fake"),
-  getRid: document.getElementById("remove"),
-  form: document.getElementById("form"),
-  reset: document.getElementById("reset"),
+  remove: document.querySelectorAll("#remove"),
 };
 
 DOMSelectors.form.addEventListener("submit", function (e) {
   e.preventDefault();
   let song = DOMSelectors.songName.value;
   let artist = DOMSelectors.artistName.value;
-  let outimg = DOMSelectors.Img.value;
+  let img = DOMSelectors.Img.value;
 
-  DOMSelectors.reset.addEventListener("click", function (e) {
-    let del = this.parentElement.remove();
-  });
+  create(DOMSelectors.container, song, artist, img);
 
-  DOMSelectors.container.insertAdjacentHTML(
+  query();
+  clear();
+});
+
+function create(container, song, artist, img) {
+  container.insertAdjacentHTML(
     "afterbegin",
-    `<div class="fake">
-        <image src></image>
-        <h1 class="son">${song}</h1>
-        <h2 class="art">${artist}</h2>
-        <img src="${outimg}" class="myImage"alt="">
-        <br>
-        <button id="remove">${del} Delete</button>
+    `<div class="false">
+      <image src></image>
+      <h1 class="son">${song}</h1>
+      <h2 class="art">${artist}</h2>
+      <img src="${img}" class="myImage"alt="">
+      <br>
+      <button id="remove" >Delete</button>
     </div>`
   );
-});
+}
 
-DOMSelectors.reset.addEventListener("click", function (e) {
-  e.container.remove();
-});
+function clear() {
+  DOMSelectors.songName.value = "";
+  DOMSelectors.artistName.value = "";
+  DOMSelectors.Img.value = "";
+}
+
+function query() {
+  DOMSelectors.remove = document.querySelectorAll("#remove");
+  DOMSelectors.remove.forEach((button) =>
+    button.addEventListener("click", function () {
+      this.parentElement.remove();
+    })
+  );
+}
