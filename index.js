@@ -16,6 +16,10 @@ DOMSelectors.form.addEventListener("submit", function (e) {
   let artist = DOMSelectors.artistName.value;
   let outimg = DOMSelectors.Img.value;
 
+  DOMSelectors.reset.addEventListener("click", function (e) {
+    let del = this.parentElement.remove();
+  });
+
   DOMSelectors.container.insertAdjacentHTML(
     "afterbegin",
     `<div class="fake">
@@ -24,7 +28,7 @@ DOMSelectors.form.addEventListener("submit", function (e) {
         <h2 class="art">${artist}</h2>
         <img src="${outimg}" class="myImage"alt="">
         <br>
-        <button id="remove" onclick="this.parentElement.remove()">Delete</button>
+        <button id="remove">${del} Delete</button>
     </div>`
   );
 });
